@@ -79,6 +79,8 @@ function displayMapAndMeetingPoint(startLat, startLon) {
             .catch(error => console.error('Error fetching the route from OSRM:', error));
         
     });
+
+    
     
 
     map.on('locationerror', function (e) {
