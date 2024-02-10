@@ -89,7 +89,8 @@ header {
 }
 
 #locationInput:hover {
-    background: rgba(255, 255, 255, 0.9); /* Less translucent on hover */
+    background: #1c2023;
+    place-holder: white;
 }
 
 #locationSubmit {
@@ -106,7 +107,8 @@ header {
 }
 
 #locationSubmit:hover {
-    background: rgba(255, 255, 255, 0.9); /* Less translucent on hover */
+    background: #1c2023;
+    place-holder: white;
 }
 
 
