@@ -9,18 +9,12 @@ import requests
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 
-# app = Flask(__name__)
 
-# @app.route('/')
-# def home():
-#     return "Welcome to Let's Meet!"
-
-# if __name__ == '__main__':
-#     app.run(debug=True)
 app = Flask(__name__)
 CORS(app)
 
 OSM_NOMINATIM_URL = 'https://nominatim.openstreetmap.org/search'
+
 
 def get_location_coordinates(address):
     params = {
@@ -37,9 +31,19 @@ def get_location_coordinates(address):
         }
     return None
 
+
+
 @app.route('/')
 def home():
-    return render_template('index copy.html')
+    return render_template('indexcopy.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/howtouse')
+def contact():
+    return render_template('howItWorks.html')
 
 @app.route('/location', methods=['POST'])
 def location():
